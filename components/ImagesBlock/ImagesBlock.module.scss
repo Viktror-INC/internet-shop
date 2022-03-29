@@ -1,0 +1,89 @@
+@import '/styles/global.scss';
+
+.imagesBlockWrap {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  row-gap: 20px;
+
+  @media only screen and (max-width: $notebook) {
+    flex-direction: column;
+  }
+}
+
+.leftBlock,
+.rightBlock {
+  display: flex;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.leftBlock {
+  flex-direction: column;
+}
+
+.rightBlock {
+  height: 100%;
+}
+
+.rightBlockImage,
+.leftBlockImage {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.rightBlockImage {
+  height: 100%;
+  display: flex;
+}
+
+.like {
+  position: absolute;
+  width: 100%;
+  max-width: 30px;
+  height: 30px;
+  top: 20px;
+  z-index: 2;
+  right: 20px;
+  background-color: $white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.imagesText {
+  position: absolute;
+  top: 25%;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  h4 {
+    color: $blue;
+    font-size: 26px;
+
+    @media only screen and (max-width: $notebook) {
+      font-size: 18px;
+    }
+  }
+
+  span {
+    color: $blackLight;
+    font-size: 15px;
+
+    @media only screen and (max-width: $notebook) {
+      font-size: 12px;
+    }
+  }
+}

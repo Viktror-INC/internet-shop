@@ -1,0 +1,225 @@
+@import '/styles/global.scss';
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 0;
+  column-gap: 40px;
+  position: relative;
+
+  @media only screen and (max-width: $mob) {
+    column-gap: 20px;
+  }
+}
+
+.logoSearchWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+
+  @media only screen and (max-width: $mob) {
+    min-width: 260px;
+    column-gap: 20px;
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 90px;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  max-width: 140px;
+  align-items: center;
+  column-gap: 20px;
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 0 0 0 38px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+  }
+}
+
+.searchImage {
+  max-width: 18px;
+  width: 100%;
+  position: absolute;
+}
+
+.menuWrap {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+
+  @media only screen and (max-width: $small) {
+    column-gap: 0;
+  }
+}
+
+.menuButton {
+  display: none;
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  border: none;
+  background-color: transparent;
+  margin: 0 auto;
+  height: 100%;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+
+  @media only screen and (max-width: $notebook) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $small) {
+    position: fixed;
+    height: auto;
+    top: 20px;
+    left: 20px;
+    z-index: 4;
+    background-color: $yellow;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+
+    font-size: 0;
+    background-image: url('/images/menu/menu.png');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s linear;
+  }
+}
+
+.menuButtonActive {
+  @media only screen and (max-width: $small) {
+    background-image: url('/images/menu/close.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+  }
+}
+
+.mainMenuButtonWrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+
+  &:hover > .menuButton {
+    border-bottom: 3px solid $black;
+
+    @media only screen and (max-width: $small) {
+      border-bottom: 3px solid transparent;
+    }
+  }
+
+  &:hover > .mainMenuWrap {
+    display: flex;
+  }
+}
+
+.mainMenuWrap {
+  width: 100%;
+
+  @media only screen and (max-width: $notebook) {
+    width: 800%;
+    display: none;
+    background-color: $white;
+    top: 45px;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 3;
+  }
+
+  @media only screen and (max-width: $mob) {
+    width: 600%;
+  }
+
+  @media only screen and (max-width: $small) {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+    min-height: 100%;
+  }
+}
+
+.mainMenuWrapActive {
+  @media only screen and (max-width: $small) {
+    transform: translateX(0);
+  }
+}
+
+.mainMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 42px;
+
+  @media only screen and (max-width: $notebook) {
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 15px 10px;
+  }
+
+  @media only screen and (max-width: $small) {
+    justify-content: center;
+  }
+
+  li {
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    padding: 3px 0;
+    transition: all 0.3s linear;
+    max-width: 50%;
+    margin: 0 auto;
+
+    &:hover {
+      border-bottom: 3px solid $black;
+    }
+  }
+}
+
+.userMenu {
+  display: flex;
+  column-gap: 25px;
+}
+
+.userButton {
+  width: 100%;
+  max-width: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}

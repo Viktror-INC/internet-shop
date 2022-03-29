@@ -1,0 +1,9 @@
+[
+  { "name": "New In", "imageUrl": "/images/leftMenu/1.png" },
+  { "name": "Clothing", "imageUrl": "/images/leftMenu/2.png" },
+  { "name": "Shoes", "imageUrl": "/images/leftMenu/3.png" },
+  { "name": "Accessories", "imageUrl": "/images/leftMenu/4.png" },
+  { "name": "Activewear", "imageUrl": "/images/leftMenu/5.png" },
+  { "name": "Gifts & Living", "imageUrl": "/images/leftMenu/6.png" },
+  { "name": "Inspiration", "imageUrl": "/images/leftMenu/7.png" }
+]

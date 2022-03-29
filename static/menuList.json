@@ -1,0 +1,6 @@
+[
+  { "name": "products", "link": "/products" },
+  { "name": "story", "link": "/story" },
+  { "name": "manufacturing", "link": "/manufacturing" },
+  { "name": "packaging", "link": "/packaging" }
+]

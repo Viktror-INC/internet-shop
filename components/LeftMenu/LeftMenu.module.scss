@@ -1,0 +1,54 @@
+@import '/styles/global.scss';
+
+.leftMenu {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $mob) {
+    row-gap: 30px;
+  }
+}
+
+.leftMenuList {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+
+  @media only screen and (max-width: $mob) {
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    color: $black;
+
+    @media only screen and (max-width: $mob) {
+      column-gap: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $blackLight;
+    }
+  }
+}
+
+.helpWrap {
+  display: flex;
+  margin: auto 0 0;
+  column-gap: 32px;
+  align-items: center;
+  color: $black;
+
+  &:hover {
+    cursor: pointer;
+    color: $blackLight;
+  }
+}
