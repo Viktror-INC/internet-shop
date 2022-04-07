@@ -1,26 +1,10 @@
-@import '/styles/global.scss';
-
-.main {
-  display: flex;
-  margin-top: 56px;
-  justify-content: space-between;
-  column-gap: 50px;
-
-  @media only screen and (max-width: $mob) {
-    flex-direction: column;
-    row-gap: 20px;
-  }
-}
+@import "/styles/global.scss";
 
 .mainContent {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
-
-  @media only screen and (max-width: $notebook) {
-    margin: 0 auto;
-    row-gap: 20px;
-  }
+  row-gap: 30px;
+  width: 100%;
 }
 
 .imagesBlock {

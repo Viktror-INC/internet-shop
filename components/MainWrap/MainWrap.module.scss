@@ -1,0 +1,24 @@
+@import "/styles/global.scss";
+
+.main {
+  display: flex;
+  margin-top: 56px;
+  justify-content: space-between;
+  column-gap: 50px;
+
+  @media only screen and (max-width: $mob) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media only screen and (max-width: $notebook) {
+    margin: 0 auto;
+    row-gap: 20px;
+  }
+}

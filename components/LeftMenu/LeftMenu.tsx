@@ -1,8 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
-import defaultMenuList from '../../static/leftMenuList.json';
-import styles from './LeftMenu.module.scss';
-import { TLeftMenu } from './@types';
+import React from "react";
+import Image from "next/image";
+import defaultMenuList from "../../static/leftMenuList.json";
+import styles from "./LeftMenu.module.scss";
+import { TLeftMenu } from "./@types";
+import Link from "next/link";
 
 export default function LeftMenu(props: TLeftMenu) {
   const { menuList } = props;
@@ -32,15 +33,25 @@ export default function LeftMenu(props: TLeftMenu) {
                     alt={item.name}
                     width={22}
                     height={22}
+                    layout="fixed"
                   />
-                  <span>{item.name}</span>
+
+                  <Link
+                    href={`/shopPages/${item.name
+                      .toLowerCase()
+                      .replace(/\s/g, "-")}`}
+                  >
+                    <a>
+                      <span>{item.name}</span>
+                    </a>
+                  </Link>
                 </li>
               );
             })}
       </ul>
       <div className={styles.helpWrap}>
         <Image
-          src={'/images/header/chat.png'}
+          src={"/images/header/chat.png"}
           alt="chat"
           width={18}
           height={18}

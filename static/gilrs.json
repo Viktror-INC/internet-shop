@@ -1,0 +1,35 @@
+[
+  {
+    "imageUrl": "/images/girlsPhoto/girl1.png",
+    "count": "20",
+    "type": "clothing",
+    "salesType": "none",
+    "alt": "girl 1",
+    "id": 1
+  },
+  {
+    "imageUrl": "/images/girlsPhoto/girl2.png",
+    "count": "20",
+    "type": "clothing",
+    "salesType": "summer",
+    "alt": "girl 2",
+    "id": 2
+  },
+
+  {
+    "imageUrl": "/images/girlsPhoto/girl3.png",
+    "count": "20",
+    "type": "clothing",
+    "salesType": "none",
+    "alt": "girl 3",
+    "id": 3
+  },
+  {
+    "imageUrl": "/images/girlsPhoto/girl4.png",
+    "count": "20",
+    "type": "clothing",
+    "salesType": "summer",
+    "alt": "girl 4",
+    "id": 4
+  }
+]

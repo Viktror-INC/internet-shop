@@ -1,4 +1,28 @@
 [
-  { "alt": "sale 50% OFF", "imageUrl": "/images/offer/W1.png" },
-  { "alt": "summer sale 50% OFF", "imageUrl": "/images/offer/W2.png" }
+  {
+    "id": 1,
+    "title": "",
+    "alt": "sale 50% OFF",
+    "imageUrl": "/images/offer/W1.png"
+  },
+  {
+    "id": 2,
+    "title": "",
+    "alt": "summer sale 50% OFF",
+    "imageUrl": "/images/offer/W2.png"
+  },
+  {
+    "id": 3,
+    "alt": "trending",
+    "imageUrl": "/images/offer/W3.png",
+    "title": "Trending & Hot",
+    "description": "A collection of most trending items."
+  },
+  {
+    "id": 4,
+    "alt": "Buy it",
+    "imageUrl": "/images/offer/W4.png",
+    "title": "Buy it for the first time",
+    "description": "New in store. Try it before anyone else."
+  }
 ]
