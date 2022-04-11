@@ -5,6 +5,7 @@ import styles from "./LeftMenu.module.scss";
 import { TLeftMenu } from "./@types";
 import Link from "next/link";
 
+
 export default function LeftMenu(props: TLeftMenu) {
   const { menuList } = props;
   return (
@@ -14,14 +15,23 @@ export default function LeftMenu(props: TLeftMenu) {
         {menuList
           ? menuList.map((item, index) => {
               return (
-                <li key={index}>
+                <li data-testid={`left-menu-item ${item.name}`} key={index}>
                   <Image
                     src={item.imageUrl}
                     alt={item.name}
                     width={22}
                     height={22}
                   />
-                  <span>{item.name}</span>
+                  <Link
+                    passHref
+                    href={`/shopPages/${item.name
+                      .toLowerCase()
+                      .replace(/\s/g, "-")}`}
+                  >
+                    <a data-testid={`left-menu-link ${item.name}`}>
+                      <span>{item.name}</span>
+                    </a>
+                  </Link>
                 </li>
               );
             })

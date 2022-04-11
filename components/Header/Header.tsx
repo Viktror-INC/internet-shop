@@ -5,10 +5,10 @@ import Image from "next/image";
 import styles from "./Header.module.scss";
 import menuList from "../../static/menuList.json";
 import classNames from "classnames";
-import RightMenu from "../RightMenu/RightMenu";
 import LogIn from "../LogIn/LogIn";
 import { useSelector } from "react-redux";
 import { TStore } from "../../store/@types";
+import { getFullPrice } from "../../utils/getFullPrice/getFullPrice";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,12 +17,8 @@ export default function Header() {
   const { cart } = useSelector((state: TStore) => state.shoppingCart);
   const [currentItems, setCurrentItems] = useState(cart);
 
-  const getFullPrice = () => {
-    let itemPrice = 0;
-    cart.map((item, index) => {
-      itemPrice = itemPrice + Number(item.price);
-    });
-
+  const fullPriceBlock = () => {
+    const itemPrice = getFullPrice(cart);
     return (
       <div className={styles.fullPrice}>
         <span className={styles.total}>Total:</span>
@@ -76,7 +72,7 @@ export default function Header() {
               );
             })}
           </ul>
-          {getFullPrice()}
+          {fullPriceBlock()}
         </div>
       </div>
     );
@@ -178,7 +174,6 @@ export default function Header() {
               </button>
               <LogIn />
             </div>
-            {/* <RightMenu /> */}
           </div>
         </div>
       </div>
